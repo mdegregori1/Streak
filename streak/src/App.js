@@ -1,11 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Route } from "react-router-dom";
+
+import LandingPage from "./components/LandingPage"
+import Login from "./components/Login"
+import Register from "./components/Register"
+import Dashboard from "./components/Dashboard"
+
+
 
 function App() {
   return (
     <div>
-      <h1>Streak</h1>
+      <Route exact path='/' component={LandingPage} />
+      <Route path='/Login' component={Login} />
+      <Route path='/Register' component={Register} />
+      <Route path='/Dashboard' component={Dashboard} />
     </div>
   );
 }
